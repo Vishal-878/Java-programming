@@ -1,0 +1,183 @@
+Program 1:- Reverse a string by characters.
+
+public class Java_Program1 {
+    public static void main(String[] args){
+        String s="coforge";
+        String rev="";
+        for(int i=s.length()-1; i>=0; i--){
+            rev=rev+s.charAt(i);
+        }
+        System.out.println(rev);
+    }
+}
+
+Program 2:- Reverse a string by words.
+
+public class Java_Program2 {
+    public static void main(String[] args) {
+        String s = "Hi I am working in coforge";
+        String[] s1 = s.split(" ");
+        String rev="";
+        for (int i = s1.length - 1; i >= 0; i--) {
+            rev=rev+s1[i]+" ";
+        }
+        System.out.println(rev);
+    }
+}
+
+Program 3:- Check given string palindrome or not.
+
+public class Java_Program3 {
+    public static void main(String[] args){
+        String s="coforge";
+        String rev="";
+        for(int i=s.length()-1; i>=0; i--){
+            rev=rev+s.charAt(i);
+        }
+        if(s.equals(rev)){
+            System.out.println("Palindrome");
+        }
+        else{
+            System.out.println("Not Palindrome");
+        }
+    }
+}
+
+Program 4:- Remove integers from a string.
+
+public class Java_Program4 {
+    public static void main(String[] args){
+        String s="co123fo678r8g2e9";
+        String s1="";
+        for(int i=0; i<s.length(); i++){
+            if(Character.isLetter(s.charAt(i))){
+                s1=s1+s.charAt(i);
+            }
+        }
+        System.out.println(s1);
+    }
+}
+
+Program 5:- Remove duplicates characters from a string.
+
+public class Java_Program5 {
+    public static void main(String[] args){
+        String s="javaprogramming";
+        String s1="";
+        for(int i=0; i<s.length(); i++){
+            char ch=s.charAt(i);
+            if(s1.indexOf(ch)<0){
+                s1=s1+ch;
+            }
+        }
+        System.out.println(s1);
+    }
+}
+
+Program 6:- Find largest element in an array.
+
+import java.util.Scanner;
+public class Java_Program6 {
+    public static void main(String[] args) {
+        int n, max;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter number of elements in the array:");
+        n=sc.nextInt();
+        int a[]=new int[n];
+        System.out.println("Enter elements of array:");
+        for(int i=0; i<n; i++) {
+            a[i]=sc.nextInt();
+        }
+        max=a[0];
+        for (int i= 0; i<n; i++) {
+            if (max<a[i]) {
+                max=a[i];
+            }
+        }
+        System.out.println("Maximum value is:" + max);
+    }
+}
+
+Program 7:- Copy all elements of one array into another array.
+
+public class Java_Program7 {
+    public static void main(String[] args){
+        int[] arr1={4,5,6,7,8,9};
+        int[] arr2=new int[arr1.length];
+        for(int i=0; i<arr1.length; i++){
+            arr2[i]=arr1[i];
+        }
+        System.out.println("Elements of original array: ");    
+        for (int i=0; i<arr1.length; i++) {     
+           System.out.print(arr1[i] + " ");    
+        }
+        System.out.println();                    
+        System.out.println("Elements of new array: ");    
+        for (int i=0; i<arr2.length; i++) {     
+           System.out.print(arr2[i] + " ");    
+        }     
+    }
+}
+
+Program 8:- Insert an element at a specific position in an Array.
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class Java_Program8 {
+    public static void main(String[] args){
+        int[] arr={3,4,5,6,8,9};
+        int ele=7;
+        int pos=5;
+        int[] arr2=new int[arr.length+1];
+        for(int i=0; i<arr.length+1; i++){
+            if(i<pos-1){
+                arr2[i]=arr[i];
+            }
+            else if(i==pos-1){
+                arr2[i]=ele;
+            }
+            else{
+                arr2[i]=arr[i-1];
+            }
+        } 
+        System.out.println("Before insertion :" +Arrays.toString(arr));
+        System.out.println("After insertion :" +Arrays.toString(arr2));
+    }
+}
+
+Program 9:- Delete an element at a specific position in an Array.
+
+import java.util.Arrays;
+
+public class Java_Program9 {
+    public static void main(String[] args){
+        int[] arr={1,2,3,4,5};
+        int[] arr2=new int[arr.length-1];
+        int pos=3;
+        for(int i=0, k=0;i<arr.length;i++){
+            if(i!=(pos-1)){
+                arr2[k]=arr[i];
+                k++;
+            }
+        }
+        System.out.println("Before deletion :" + Arrays.toString(arr));
+        System.out.println("After deletion :" + Arrays.toString(arr2));
+    }
+}
+
+Program 10:- Reverse an array by elements.
+
+import java.util.Arrays;
+
+public class Java_Program10 {
+    public static void main(String[] args){
+        int[] arr={3,4,5,6,8,9};
+        int[] arr2=new int[arr.length];
+        int k=0;
+        for(int i=arr.length-1; i>=0; i--){
+            arr2[k++]=arr[i];
+        }
+        System.out.println("Reversed array: "+Arrays.toString(arr2));
+    }
+}

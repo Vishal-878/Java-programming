@@ -185,7 +185,7 @@ public class Java_Program10 {
 Program 11:- Find fibonacciSeries of nth terms.
 
 import java.util.Scanner;
-public class FibonacciSeries {
+public class Java_Program11 {
     public static void main(String[] args) {
         int terms;
         Scanner scanner = new Scanner(System.in);
@@ -204,6 +204,33 @@ public class FibonacciSeries {
         } else {
             return fibonacci(n-1)+fibonacci(n-2);
         }
+    }
+}
+
+Program 12:- Check given number is armstrong number or not.
+
+import java.lang.Math;
+public class Java_Program12{
+    public static void main(String[] args){
+        int num=153;
+        String s=Integer.toString(num);
+        int l=s.length();
+        int sum=0;
+        int n;
+        int temp=num;
+        while(temp>0){
+            n=temp%10;
+            sum=(int) (sum+(Math.pow(n,l)));
+            temp=temp/10;
+        }
+        System.out.println(sum);
+        if(sum==num){
+            System.out.println("Armstrong number");
+        }
+        else{
+            System.out.println("Not Armstrong number");
+        }
+
     }
 }
 
